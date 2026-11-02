@@ -1,0 +1,42 @@
+name: moodle-nginx
+type: service
+from: php-nginx
+guidance: GUIDANCE.md
+fromVersionConstraint: "^2.0.0"
+fromVersion: "2.1.7"
+title: Nginx (Moodle)
+
+labels:
+- moodle
+
+links:
+- name: backend
+  selectors:
+  - type: service
+    labels:
+    - moodle
+
+build:
+  link: backend
+  # Moodle keeps everything served over the web in public/. Only that
+  # directory goes into this image, at the same path as in the PHP image.
+  copySubdir: "{{settings.docroot}}"
+
+settings:
+- name: docroot
+  title: Nginx docroot
+  default: public
+  var: DOCROOT_SUBDIR
+
+# Moodle's rules replace the image's PHP preset. The service keeps the preset
+# name php, which also makes the image define the PHP-FPM upstream.
+configs:
+- name: preset
+  title: Moodle preset
+  filepath: /etc/gotpl/presets/php.conf.tmpl
+  config: preset.conf.tmpl
+
+env:
+# Matches the upload limit of the Moodle PHP service.
+- name: NGINX_CLIENT_MAX_BODY_SIZE
+  value: 256m
