@@ -19,9 +19,9 @@ configuration for Nginx (Moodle).
 | --- | --- |
 | Service name | `moodle-nginx` |
 | Type | Application service |
-| Inherits from | [`php-nginx`](https://github.com/wodby/service-php-nginx) with version constraint `^2.0.0` |
+| Inherits from | [`nginx-proxy`](https://github.com/wodby/service-nginx-proxy) with version constraint `^1.0.0` |
+| Image | Nginx variant of [wodby/moodle](https://github.com/wodby/moodle) |
 | Service links | Backend, required |
-| Application build | Built from the linked Moodle service's `public` directory |
 | Configuration | 1 configuration files |
 
 ## Use this service
