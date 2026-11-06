@@ -3,7 +3,7 @@ type: service
 from: nginx-proxy
 guidance: GUIDANCE.md
 fromVersionConstraint: "^1.0.0"
-fromVersion: "1.1.8"
+fromVersion: "1.1.9"
 title: Nginx (Moodle)
 
 labels:
@@ -14,7 +14,7 @@ labels:
 options:
 - version: '5.3'
   default: true
-  tag: 5.3-nginx-r1
+  tag: 5.3-nginx-r2
 
 links:
 - name: backend
