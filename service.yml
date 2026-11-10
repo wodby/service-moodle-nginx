@@ -14,7 +14,7 @@ labels:
 options:
 - version: '5.3'
   default: true
-  tag: 5.3-nginx-r2
+  tag: 5.3-nginx-r3
 
 links:
 - name: backend
