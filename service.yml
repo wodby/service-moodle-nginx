@@ -3,7 +3,7 @@ type: service
 from: nginx-proxy
 guidance: GUIDANCE.md
 fromVersionConstraint: "^1.0.0"
-fromVersion: "1.2.4"
+fromVersion: "1.2.6"
 title: Nginx (Moodle)
 
 labels:
@@ -16,6 +16,7 @@ options:
   default: true
   tag: 5.3-nginx-r8
 
+  digest: sha256:f6078c9e5db8d91df397eae4ca63772ff3f7259b65d30ed1d8b120c329417c86
 links:
 - name: backend
   title: Moodle
