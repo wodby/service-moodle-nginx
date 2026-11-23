@@ -14,9 +14,9 @@ labels:
 options:
 - version: '5.3'
   default: true
-  tag: 5.3-nginx-r8
+  tag: 5.3-nginx-r9
 
-  digest: sha256:f6078c9e5db8d91df397eae4ca63772ff3f7259b65d30ed1d8b120c329417c86
+  digest: sha256:243b5d3f9791d093c6f76b100a9b27ee3b70d414c404612d77252364dc108ef7
 links:
 - name: backend
   title: Moodle
